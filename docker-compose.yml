@@ -15,7 +15,7 @@ services:
       - "8081:1337"
     environment:
       - DATABASE_CLIENT=postgres
-      - DATABASE_HOST=my_db_compose
+      - DATABASE_HOST=172.16.58.138
       - DATABASE_PORT=55432
       - DATABASE_USERNAME=weerayuth
       - DATABASE_PASSWORD=weerayuth
