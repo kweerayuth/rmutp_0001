@@ -11,7 +11,7 @@ services:
   app:
     image: prawee/strapi:lastest
     container_name: my_app_compose
-    posts:
+    ports:
       - "8081:1337"
     environment:
       - DATABASE_CLIENT=postgres
