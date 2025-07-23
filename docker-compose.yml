@@ -9,7 +9,7 @@ services:
       - POSTGRES_USER=weerayuth
       - POSTGRES_PASSWORD=weerayuth
   app:
-    image: prawee/strapi:lastest
+    image: prawee/strapi:latest
     container_name: my_app_compose
     ports:
       - "8081:1337"
