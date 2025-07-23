@@ -11,12 +11,12 @@ services:
   app:
     image: prawee/strapi:lastest
     container_name: my_app_compose
-  posts:
-    - "8081:1337"
-  environment:
-    - DATABASE_CLIENT=postgres
-    - DATABASE_HOST=my_db_compose
-    - DATABASE_PORT=55432
-    - DATABASE_USERNAME=weerayuth
-    - DATABASE_PASSWORD=weerayuth
-    - DATABASE_SSL=false
+    posts:
+      - "8081:1337"
+    environment:
+      - DATABASE_CLIENT=postgres
+      - DATABASE_HOST=my_db_compose
+      - DATABASE_PORT=55432
+      - DATABASE_USERNAME=weerayuth
+      - DATABASE_PASSWORD=weerayuth
+      - DATABASE_SSL=false
