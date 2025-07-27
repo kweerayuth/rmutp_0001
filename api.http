@@ -1,0 +1,46 @@
+# Test API
+@user={$env USER_USERNAME}
+@password={$env USER_PASSWORD}
+@email={$env USER_EMAIL}
+@user_key={$env USER_KEY}
+
+### Identification / Register account
+POST http://127.0.0.1:8090/api/auth/local/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "{{user}}", 
+    "email": "{{email}}",
+    "password": "{{password}}"
+}
+
+
+### Get all users
+GET http://localhost:8090/api/users HTTP/1.1
+Content-Type: application/json
+
+### Authentication  /  Login
+POST http://127.0.0.1:8090/api/auth/local HTTP/1.1
+Content-Type: application/json
+
+{
+    "identifier": "{{email}}",
+    "password": "{{password}}"
+}
+
+
+
+### Get Profile
+GET http://localhost:8090/api/users/me HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{user_key}}
+
+
+### Update Profile
+PUT http://localhost:8090/api/users/5 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{user_key}}
+
+{
+    "username": "user123"
+}
