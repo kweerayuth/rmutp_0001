@@ -12,12 +12,12 @@ services:
     image: prawee/strapi:latest
     container_name: my_app_compose
     ports:
-      - "8081:1337"
+      - "8090:1337"
     environment:
       - DATABASE_CLIENT=postgres
       - DATABASE_NAME=weerayuth
-      - DATABASE_HOST=172.16.58.138
-      - DATABASE_PORT=55432
+      - DATABASE_HOST=db    # สามารถ Link ไปยัง Service db ได้ แทนที่จะใช้ IP
+      - DATABASE_PORT=5432  # สามารถใช้งาน Internal Port ได้ เนื่องจากเป็น Service ทีเชื่อมถึงกันแบบภายใน
       - DATABASE_USERNAME=weerayuth
       - DATABASE_PASSWORD=weerayuth
       - DATABASE_SSL=false
