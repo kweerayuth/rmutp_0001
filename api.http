@@ -1,8 +1,8 @@
 # Test API
-@user={$env USER_USERNAME}
-@password={$env USER_PASSWORD}
-@email={$env USER_EMAIL}
-@user_key={$env USER_KEY}
+@username={{$dotenv USER_USERNAME}}
+@password={{$dotenv USER_PASSWORD}}
+@email={{$dotenv USER_EMAIL}}
+@user_key={{$dotenv USER_KEY}}
 
 ### Identification / Register account
 POST http://127.0.0.1:8090/api/auth/local/register HTTP/1.1
@@ -37,10 +37,10 @@ Authorization: Bearer {{user_key}}
 
 
 ### Update Profile
-PUT http://localhost:8090/api/users/5 HTTP/1.1
+PUT http://localhost:8090/api/users/8 HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer {{user_key}}
 
 {
-    "username": "user123"
+    "username": "{{username}} updateuser"
 }
