@@ -37,7 +37,7 @@ Authorization: Bearer {{user_key}}
 
 
 ### Update Profile
-PUT http://localhost:8090/api/users/8 HTTP/1.1
+PUT http://localhost:8090/api/users/1 HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer {{user_key}}
 
